@@ -35,12 +35,12 @@ for(i=0;i<8-1;i++){
 	
 	}	
 }
-
-        
+   
 cout<<endl;
 for(i=0;i<8;i++){
 	cout<<setw(4)<<a[i];
 }
+
 
 /*=========BUBBLE SORT========(gamartivebuli)*/
 /*
@@ -60,7 +60,7 @@ for(i=0;i<8-1;i++){
 	for(int j=0;j<8-i;j++){
 		if(a[j]<a[j+1]){
 			swap(a[j],a[j+1]);	
-		p=true;
+			p=true;
 		}
 	}	
 	if(p=false) break;
@@ -94,15 +94,15 @@ for(i=0;i<n-1;i++){
 for(i=0;i<n;i++){
 	cout<<a[i]<<" ";
 }
-*/
+
 
 /*=========BINARY_SEARCH========*/
-
 /*
 //         0 1 2 3 4 5 6 7 8 9
  int a[]={10,9,8,6,5,4,3,2,1,0};
-int x=2,l=0,r=10-1,m;
+int x=8,l=0,r=10-1,m;
 bool p=false;
+
 while(l<r &&p==false){
 m=(l+r)/2;
 
@@ -117,29 +117,32 @@ m=(l+r)/2;
 	}
 
 }
+
 if(p==true)cout<<"YES"<<" "<<m;
  else cout<<"NO";
 */
 //=========BINARY_SEARCH========(martivi xerxi)
-
 /*
 //         0 1 2 3 4 5 6 7 8 
  int a[9]={9,8,6,5,4,3,2,1,0};
-int x=2,l=0,r=9-1,m;
+
+int x=4,l=0,r=9-1,m;
+
 while(l<r){
 m=(l+r)/2;
-	 if(a[m]>x){
+	if(a[m]>x){
 		l=m+1;
 	}
 	else{
 		r=m;
 	}
 }
+if(a[r]==x )cout<<"YES"<<" "<<m;
+ else cout<<"NO";
 a[r]==x ? cout<<"YES"<<" "<<r : cout<<"NO";
 
 
 /*=========INSERTION SORT========*/
-
 /*
 int a[100],n,i,j;
 
@@ -165,8 +168,8 @@ for(i=0;i<n;i++){
 
 
 /*=========INSERTION SORT using binary search========*/
-
 /*
+
  int a[9]={9,8,6,5,4,3,2,1,0};
  int j,i,mid,left,right,current,k;
  
@@ -193,7 +196,7 @@ a[k]=current;
 
 /*========Finding all divisors of number with determining primality of number-algorithm=========*/
 
-/*
+/*c
 string p="Primme Number";
 int b[100],i,arr,k;
 cin>>arr;
@@ -219,6 +222,8 @@ cout<<b[i]<<" ";
 
 }
 */
+
+
 /*
 int i,a[100],k=1,mx,p;
 long long int t;
@@ -348,7 +353,7 @@ j++;
 for(i=1;i<=n;i++){
 	cout<<setw(3)<<b[i];
 }
-/*========Euclid’s Algorithm=========*/
+/*========Euclidï¿½s Algorithm=========*/
 /*
 Greatest Common Divisor=GCD
 Finding The Smallest Common Multiple=SCM
@@ -397,7 +402,7 @@ while(n>=1){
 }
 
 for( i=0;i<=k;i++){
-	b[i]
+
 	cout<<b[i]<<" ";
 }
 
