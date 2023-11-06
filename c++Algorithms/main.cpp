@@ -376,31 +376,30 @@ int main()
 	cout<<"GCD="<<GCD<<endl<<"SCM="<<SCM;
 	*/
 	/*=========long Number Save Algorithm========*/
-
-	int a, i, b[200], k;
-	for (i = 0; i < 6; i++)
-	{
-		b[i] = 0;
-	}
-	a = 2;
-	k = 5;
-	b[k] = 1;
-	while (k >= 0)
-	{
-		while (b[k] < 10)
+	/*
+		for (i = 0; i < 6; i++)
 		{
-			b[k] *= a;
-			a++;
+			b[i] = 0;
 		}
-		b[k--] += b[k] / 10;
-		b[k] %= 10;
-		k--;
-	}
-	for (i = 0; i < 6; i++)
-		cout << b[i] << " ";
+		a = 2;
+		k = 5;
+		b[k] = 1;
+		while (k >= 0)
+		{
+			while (b[k] < 10)
+			{
+				b[k] *= a;
+				a++;
+			}
+			b[k--] += b[k] / 10;
+			b[k] %= 10;
+			k--;
+		}
+		for (i = 0; i < 6; i++)
+			cout << b[i] << " ";
 
-	/*=========Transformation of the ordinary
-	representation of numbers into tabular representation========*/
+		/*=========Transformation of the ordinary
+		representation of numbers into tabular representation========*/
 	/*
 	int n,i,b[100],k;
 	cin>>n;
@@ -516,8 +515,77 @@ int main()
 		cout << "In correct Order:" << endl;
 		while (i >= 0)
 		{
-			cout << c[i] << " ";
+			cout << c[i];
 			i--;
 		}
 	/*========Long numbers sustraction=========*/
+	/*
+	int k, n, m, i, a[222222], b[222222], c[100];
+	cin >> n >> m;
+	for (i = 0; i < n; i++)
+		cin >> a[i];
+
+	for (i = 0; i < m; i++)
+		cin >> b[i];
+
+	k = max(n, m) + 1;
+	for (i = 0; i < k; i++)
+		c[i] = 0;
+
+	for (i = 0; i < k; i++)
+	{
+		c[i] += a[i] - b[i];
+		if (c[i] < 0)
+		{
+			c[i] += 10;
+			c[i + 1]--;
+		}
+	}
+	k--;
+	if (c[k] == 0)
+		k--;
+
+	i = k - 1;
+	cout << "In correct Order:" << endl;
+	while (i >= 0)
+	{
+		cout << c[i];
+		i--;
+	}
+/*========Long numbers multiplication=========*/
+	int k, n, m, i, a[222222], b[222222], c[100];
+	cin >> n >> m;
+	for (i = 0; i < n; i++)
+		cin >> a[i];
+
+	for (i = 0; i < m; i++)
+		cin >> b[i];
+
+	k = n + m;
+
+	for (i = 0; i < k; i++)
+		c[i] = 0;
+
+	for (i = 0; i < m; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			c[j + i] += b[i] * a[j];
+			if (c[j + i] >= 10)
+			{
+				c[j + i + 1] += c[j + i] / 10;
+				c[j + i] %= 10;
+			}
+		}
+	}
+
+	while (c[k] == 0)
+		k--;
+
+	cout << "In correct Order:" << endl;
+	while (k >= 0)
+	{
+		cout << c[k];
+		k--;
+	}
 }
